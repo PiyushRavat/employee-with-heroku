@@ -1,0 +1,30 @@
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<h3><a href="/employee" class="btn btn-secondary">Create New</a> Employee List</h3>
+<table class="table table-striped">
+	<thead>
+			<tr>
+				<th>Full Name</th>
+				<th>Email</th>
+				<th>Mobile</th>
+				<th>City</th>
+			</tr>
+	</thead>
+	<tbody>
+			{{#each list}}
+			<tr>
+				<td>{{this.fullname}}</td>
+				<td>{{this.email}}</td>
+				<td>{{this.mobile}}</td>
+				<td>{{this.city}}</td>
+			    <td>
+					<a href="/employee/{{this._id}}" class="btn btn-primary btn-sm" href="#" role="button">edit</a>
+						
+					<a href="/employee/delete/{{this._id}}" onclick="return confirm('are you sure this delete');" class="btn btn-danger btn-sm"  role="button">delete</a>
+						
+				</td>
+			</tr>
+			{{/each}}
+	</tbody>
+</table>

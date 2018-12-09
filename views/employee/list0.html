@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Full Name</th>
+				<th>Email</th>
+				<th>Mobile</th>
+				<th>City</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each list}}
+			<tr>
+				<td>{{this.fullname}}</td>
+				<td>{{this.email}}</td>
+				<td>{{this.mobile}}</td>
+				<td>{{this.city}}</td>
+				<td>
+					<a href=""><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+					<a href=""><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+
+</body>
+</html>
